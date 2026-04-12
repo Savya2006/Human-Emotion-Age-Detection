@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "Detection": {
+      "title": "Emotion Detection",
+      "description": "A record of an emotion detection event.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "The ID of the user who performed the detection." },
+        "emotion": { "type": "string", "description": "The detected emotion." },
+        "age": { "type": "string", "description": "The guessed age." },
+        "timestamp": { "type": "string", "format": "date-time", "description": "When the detection occurred." },
+        "imageUrl": { "type": "string", "description": "Optional URL to the image used (if stored, though we might just store results)." },
+        "method": { "type": "string", "enum": ["live", "upload"], "description": "The method used for detection." }
+      },
+      "required": ["userId", "emotion", "age", "timestamp", "method"]
+    },
+    "User": {
+      "title": "User Profile",
+      "description": "Information about the user.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    }
+  },
+  "firestore": {
+    "/detections/{detectionId}": {
+      "schema": "Detection",
+      "description": "Collection of emotion detection records."
+    },
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profile information."
+    }
+  }
+}

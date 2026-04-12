@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-sage: #A8D5BA;
+  --color-brand-teal: #6FB1A0;
+  --color-brand-yellow: #FFF3B0;
+  --color-brand-peach: #FFD6C9;
+  --color-brand-sky: #BDE0FE;
+  --color-brand-lavender: #E4C1F9;
+  --color-brand-cream: #FAF9F6;
+  --color-brand-light-grey: #F1F3F5;
+  --color-brand-charcoal: #333333;
+  --color-brand-muted-grey: #6C757D;
+  --color-brand-success: #95D5B2;
+  --color-brand-error: #F08080;
+  --color-brand-info: #90DBF4;
+
+  /* Overriding some defaults for easier application */
+  --color-primary: var(--color-brand-teal);
+  --color-secondary: var(--color-brand-sage);
+  --color-accent: var(--color-brand-yellow);
+  --color-background: var(--color-brand-cream);
+  --color-foreground: var(--color-brand-charcoal);
+}

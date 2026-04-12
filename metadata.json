@@ -1,0 +1,5 @@
+{
+  "name": "EMO-SENSE - Emotion & Age Detector",
+  "description": "A supportive tool for mental health, professional use, and fun, detecting emotions and guessing age from live video or uploaded photos.",
+  "requestFramePermissions": ["camera"]
+}
